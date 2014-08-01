@@ -1,4 +1,4 @@
-			
+﻿			
 	/* removes promoted and wiki tab */
 
 	.listing-page .tabmenu li:nth-of-type(8){display:none;}    /*promoted*/
@@ -2521,3 +2521,22 @@ content: " VTC"
     color: #262626;
     text-decoration: none
 }
+
+
+
+/* Submit hover warning */
+
+.sidebox.submit:hover:before {
+    position: fixed;
+    display: block;
+    top: 0;
+    text-align: center;
+    background-color: #B03E2B;
+    color: #fff;
+    z-index: 1000;
+    padding: 5px 0;
+    width: 100%;
+    left: 0;
+    font-size: x-large;
+    font-weight: bold;
+    content: "Please read the sidebar before posting!" }
