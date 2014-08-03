@@ -299,25 +299,25 @@ border-bottom: 1px solid #0F0F0F;
 	
 
 
-.titlebox .usertext .md > h2{
+/*.titlebox .usertext .md > h2{
     font-size: small !important;
-    background-color: #e5e5e5; /*Background color of #*/
-    color: #eee; /*Text color of #*/
+    background-color: #e5e5e5; /
+    color: #eee;
 	text-align: center;
 	margin-left:50px;
 	margin-right:50px;
 	margin-top:20px;
 	margin-bottom:20px;
-    }
+    } 
 .res-nightmode .usertext .md > h2 {
-background-color: #377798; /*Nightmode fix for #*/
+background-color: #377798; 
 }
 
 .titlebox .usertext .md > h2:hover {
-    background-color: #D2D2D2; /*Background color of #*/
-    color: #eee; /*Text color of #*/
+    background-color: #D2D2D2; 
+    color: #eee; 
 	text-align: center;
-    }
+    } */
 
 .tabmenu li {
 				display: inline-block;
@@ -518,9 +518,9 @@ background-color: #377798; /*Nightmode fix for #*/
 			}
 
 				.morelink:hover {
-					background-color: #FF7B7B;
-					border-top: 2px solid #FF7B7B;
-					border-bottom: 3px solid #B63838;
+					background-color: #C45441;
+					border-top: 2px solid #C45441;
+					border-bottom: 3px solid #C45441;
 				}
 
 					.morelink:active {
@@ -533,7 +533,7 @@ background-color: #377798; /*Nightmode fix for #*/
 
 				.morelink a {
 					color: #fff !important;
-					text-shadow: 0px 1px 0px #E15757;
+					text-shadow: 0px 1px 0px transparant;
 					letter-spacing: 0px;
 					font-weight: bold;
 					font-size: 15px;
@@ -681,8 +681,8 @@ background-color: #377798; /*Nightmode fix for #*/
 					padding: 0px 16px;
 				}
 					.fancy-toggle-button .add:hover:after {
-						background-color: #FF7B7B;
-						border-bottom: 3px solid #B63838;
+						background-color: #C45441;
+						border-bottom: 0px solid #B63838;
 						height: 23px;
 					}
 
@@ -861,18 +861,18 @@ background-color: #377798; /*Nightmode fix for #*/
 				}
 
 					.sidecontentbox a.helplink:hover {
-						background-color: #6599fa;
-						border-top: 2px solid #6599fa;
-						border-bottom: 2px solid #3863b6;
+						background-color: #C45441;
+						border-top: 2px solid #C45441;
+						border-bottom: 2px solid #C45441;
 						-webkit-box-shadow: none;
 						box-shadow: none;
 						text-decoration: none;
 					}
 
 						.sidecontentbox a.helplink:active {
-							background-color: #3863b6;
+							background-color: #C45441;
 							border-top: 2px solid #21407a;
-							border-bottom: 2px solid #3863b6;
+							border-bottom: 2px solid #C45441;
 							-webkit-box-shadow: none;
 							box-shadow: none;
 						}
@@ -2539,4 +2539,102 @@ content: " VTC"
     left: 0;
     font-size: x-large;
     font-weight: bold;
-    content: "Please read the sidebar before posting!" }
+    content: "Please check out the sidebar before posting!" }
+	
+/* Sidebar links! */
+
+.side .usertext h2 {
+	margin: 5px 0 5px 0;
+	padding: 8px;
+	font-size: 13px;
+	font-weight: bold;
+	background: #B03E2B;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: Arial,sans-serif;
+/*---	text-transform: uppercase; --- */
+}
+
+.res-nightmode .side .usertext h2 {
+    background: #343434 !important;
+    color: #369;
+}
+.side .usertext h2:hover {
+	box-shadow: 0 0;
+	cursor: pointer;
+	background: #C45441;
+}
+.res-nightmode .side .usertext h2:hover {
+        background: #0c1217 !important;}
+
+
+.side .usertext h2 + ul {
+	margin-top: -20px;
+	padding: 0 0 0;
+	margin: -5px 0 0 0;
+	z-index:99999;
+	position: relative;
+	max-height: 0;
+	border:1px solid #DDD;
+	border-width:0 1px 0px 1px;
+	overflow:hidden;
+	transition: all 2s ease-in-out .3s;
+	-moz-transition: all 2s ease-in-out .3s;
+	-webkit-transition: all 2s ease-in-out .3s;
+	-o-transition: all 2s ease-in-out .3s;
+}
+.side .usertext h2 + ul li {
+	display: block;
+	margin:0;
+	padding: 5px 15px;
+	font-size: 11px;
+	line-height: 15px;
+}
+.side .usertext h2:hover + ul, .side .usertext h2 + ul:hover {
+	max-height: 900px;
+	border-width:0 1px 1px 1px;
+}
+
+.titlebox .usertext-body h1:last-of-type{
+        padding:5px 10px 5px 10px;
+        text-transform: none;
+}
+
+.titlebox .usertext-body h2:last-of-type{
+        padding:5px 10px 5px 10px;
+        text-transform: none;
+}
+
+/*  fix for comment collapse - makes collapse and expand buttons line up */
+
+.comment>.entry>.collapsed{
+        padding-left: 33px!important;
+}
+
+/*
+ * Set downvote arrow popup.
+ */
+.arrow.down:hover:before { /* Tranparent hover downvote warning box BG. */
+  position: absolute; display: block;  z-index: 1000;
+  width: 400px; padding: 4px;
+  margin-left: 20px;
+
+  border: 0px solid #000000;
+  background-color: #DE9797;
+  opacity: 0.9;
+  /* Identical non-visible text in background color here only to set box size properly */
+  color: #DE9797;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  content: "Downvoting? Only for misleading or unconstructive content. DO NOT downvote just because you disagree or don't like something!";
+}
+.arrow.down:hover:after { /* Tranparent hover downvote warning box content. */
+  position: absolute; display: block;  z-index: 1001;
+  width: 400px; padding: 4px;
+  margin-left: 20px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  content: "Downvoting? Only for misleading or unconstructive content. DO NOT downvote just because you disagree or don't like something!";
+}
